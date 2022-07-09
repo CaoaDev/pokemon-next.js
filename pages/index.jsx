@@ -10,7 +10,7 @@ const Pokemon = ({ pokemon }) => {
 export default function Pokemones({ pokemones }) {
   return (
     <div>
-      <p>Pokemones</p>
+      <p>Mi App de Pokemones en NextJs</p>
       <ul>
         {pokemones.map(pokemon => <Pokemon pokemon={pokemon} key={pokemon.name} />)}
       </ul>
@@ -19,7 +19,7 @@ export default function Pokemones({ pokemones }) {
 }
 
 export const getStaticProps = async () => {
-  const response = await fetch('http://pokeapi.co/api/v2/pokemon?limit=100')
+  const response = await fetch('http://pokeapi.co/api/v2/pokemon?limit=200')
   const data = await response.json()
 
   return {
